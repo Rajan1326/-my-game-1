@@ -1,0 +1,38 @@
+:root{
+  --bg:#0f1720;
+  --panel:#0b1220;
+  --accent:#8fd3a7;
+  --muted:#9aa7b2;
+  --glass: rgba(255,255,255,0.03);
+  --tile-size: 40px;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+html,body,#game{height:100%;margin:0;font-family:var(--font);background:linear-gradient(180deg,#07111a, #071726);color:#e6f2ef}
+#game{display:flex;flex-direction:column;gap:8px;padding:8px 12px}
+
+header{display:flex;align-items:center;justify-content:space-between}
+header h1{font-size:1.1rem;margin:0;color:var(--accent)}
+.controls{display:flex;align-items:center;gap:10px}
+.controls button{background:var(--glass);border:1px solid rgba(255,255,255,0.04);padding:6px 8px;border-radius:6px;color:inherit;cursor:pointer}
+.controls .hint{font-size:0.8rem;color:var(--muted)}
+
+main{display:flex;gap:12px;flex:1;align-items:flex-start}
+#canvas-wrap{background:rgba(0,0,0,0.25);padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03)}
+canvas{display:block;background:linear-gradient(#8fd3a7, #7dc08f);border-radius:6px;cursor:grab}
+
+#ui{width:320px;display:flex;flex-direction:column;gap:10px}
+.panel{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.08));padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03)}
+.panel h2{margin:0;margin-bottom:8px;font-size:0.95rem;color:var(--accent)}
+
+#inventory{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;list-style:none;padding:0;margin:0}
+#inventory li{background:rgba(255,255,255,0.02);padding:8px;border-radius:6px;text-align:center;border:1px solid rgba(255,255,255,0.02)}
+.item-count{display:block;color:var(--muted);font-size:0.85rem}
+
+.recipe{display:flex;align-items:center;justify-content:space-between;padding:6px;border-radius:6px;margin-bottom:6px;background:rgba(0,0,0,0.06)}
+.recipe button{padding:6px 8px;border-radius:6px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:var(--accent);cursor:pointer}
+.recipe .needs{font-size:0.85rem;color:var(--muted)}
+
+#stats{font-size:0.9rem;color:var(--muted)}
+footer{opacity:0.7;font-size:0.8rem;text-align:center}
