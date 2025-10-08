@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Infinite Craft — Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game">
+    <header>
+      <h1>Infinite Craft</h1>
+      <div class="controls">
+        <button id="saveBtn">Save</button>
+        <button id="resetBtn">Reset</button>
+        <div class="hint">WASD / Arrow keys to move · Click tile to gather · Drag to pan</div>
+      </div>
+    </header>
+
+    <main>
+      <div id="canvas-wrap">
+        <canvas id="world" width="800" height="500"></canvas>
+      </div>
+
+      <aside id="ui">
+        <section class="panel">
+          <h2>Inventory</h2>
+          <ul id="inventory"></ul>
+        </section>
+
+        <section class="panel">
+          <h2>Crafting</h2>
+          <div id="recipes"></div>
+        </section>
+
+        <section class="panel">
+          <h2>Stats</h2>
+          <div id="stats"></div>
+        </section>
+      </aside>
+    </main>
+
+    <footer>
+      <small>Made for quick demo — drop into GitHub → deploy to Vercel</small>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
